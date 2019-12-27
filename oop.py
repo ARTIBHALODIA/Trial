@@ -7,8 +7,7 @@ class Test:
 		return "Test a:%s b:%s" % (self.a, self.b) 
 
 	def __str__(self): 
-		return "From str method of Test: a is %s," \ 
-			"b is %s" % (self.a, self.b) 
+		return "From str method of Test: a is %s," "b is %s" % (self.a, self.b) 
 
 # Driver Code		 
 t = Test(1234, 5678) 
