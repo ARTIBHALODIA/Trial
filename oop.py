@@ -1,15 +1,30 @@
-class Test: 
-	def __init__(self, a, b): 
-		self.a = a 
-		self.b = b 
+# parent class
+class Bird:
+    
+    def __init__(self):
+        print("Bird is ready")
 
-	def __repr__(self): 
-		return "Test a:%s b:%s" % (self.a, self.b) 
+    def whoisThis(self):
+        print("Bird")
 
-	def __str__(self): 
-		return "From str method of Test: a is %s," "b is %s" % (self.a, self.b) 
+    def swim(self):
+        print("Swim faster")
 
-# Driver Code		 
-t = Test(1234, 5678) 
-print(t) # This calls __str__() 
-print([t]) # This calls __repr__() 
+# child class
+class Penguin(Bird):
+
+    def __init__(self):
+        # call super() function
+        super().__init__()
+        print("Penguin is ready")
+
+    def whoisThis(self):
+        print("Penguin")
+
+    def run(self):
+        print("Run faster")
+
+peggy = Penguin()
+peggy.whoisThis()
+peggy.swim()
+peggy.run()
