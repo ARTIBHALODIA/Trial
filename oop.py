@@ -1,23 +1,16 @@
-# Class for Computer Science Student 
-class CSStudent: 
-  
-    # Class Variable 
-    stream = 'cse'             
-  
-    # The init method or constructor 
-    def __init__(self, roll): 
-    
-        # Instance Variable     
-        self.roll = roll        
-   
-# Objects of CSStudent class 
-a = CSStudent(101) 
-b = CSStudent(102) 
-   
-print(a.stream)  # prints "cse" 
-print(b.stream)  # prints "cse" 
-print(a.roll)    # prints 101 
-   
-# Class variables can be accessed using class 
-# name also 
-print(CSStudent.stream) # prints "cse" 
+class Test: 
+	def __init__(self, a, b): 
+		self.a = a 
+		self.b = b 
+
+	def __repr__(self): 
+		return "Test a:%s b:%s" % (self.a, self.b) 
+
+	def __str__(self): 
+		return "From str method of Test: a is %s," \ 
+			"b is %s" % (self.a, self.b) 
+
+# Driver Code		 
+t = Test(1234, 5678) 
+print(t) # This calls __str__() 
+print([t]) # This calls __repr__() 
